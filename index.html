@@ -3,16 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ILY</title>
+    <title>Valentine's Surprise</title>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
     <style>
 	
         body {
+	    font-family: 'Poppins', sans-serif;
             background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #ffdde1, #ff758c);
         background-size: 400% 400%;
         animation: gradientBG 10s ease infinite;
         height: 100vh;
         margin: 0;
         overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
         }
 		@keyframes gradientBG {
         0% { background-position: 0% 50%; }
@@ -69,13 +75,14 @@
             font-size: 30px;
             cursor: pointer;
             margin-top: 10px;
-        }
+       
+
     </style>
 </head>
 <body>
 
     <div class="container">
-        <img class="header-img" src="LM2.jpg" alt="Valentine's Image">
+        <img class="header-img" src="images/LM2.jpg" alt="Valentine's Image">
         <div class="title">I MEOW U ❤️</div>
         <div class="message">Will you be my Valentine?</div>
         <button class="button" onclick="goToSurprise()">Agree!</button>
@@ -92,6 +99,20 @@
         function playMusic() {
             window.location.href = "https://www.youtube.com/watch?v=A1h7DeR3eic";
         }
+		function createHeart() {
+        const heart = document.createElement("div");
+        heart.classList.add("heart");
+        heart.innerHTML = "❤️";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+            heart.remove();
+        }, 5000);
+    }
+
+    setInterval(createHeart, 500);
     </script>
 
 </body>
