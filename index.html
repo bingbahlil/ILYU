@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Surprise</title>
+    <style>
+	
+        body {
+            background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #ffdde1, #ff758c);
+        background-size: 400% 400%;
+        animation: gradientBG 10s ease infinite;
+        height: 100vh;
+        margin: 0;
+        overflow: hidden;
+        }
+		@keyframes gradientBG {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+        }
+       .heart {
+        position: absolute;
+        color: red;
+        font-size: 24px;
+        animation: float 5s linear infinite;
+        opacity: 0.8;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            background: #fff;
+            color: black;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .header-img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .message {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .button {
+            display: block;
+            width: 80%;
+            padding: 10px;
+            margin: 10px auto;
+            background: #ff4d6d;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background: #d1413d;
+        }
+        .music-icon {
+            font-size: 30px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img class="header-img" src="images/Lm.jpg" alt="Valentine's Image">
+        <div class="title">I MEOW U ❤️</div>
+        <div class="message">Will you be my Valentine?</div>
+        <button class="button" onclick="goToSurprise()">Agree!</button>
+        <div class="music-icon" onclick="playMusic()">🎵</div>
+        
+		<p>I don't know what comes after infinity but i love, you more than that <br> I just love every side of you.</p>
+    </div>
+
+    <script>
+        function goToSurprise() {
+            window.location.href = "https://online.fliphtml5.com/tawsg/ogdv/";
+        }
+
+        function playMusic() {
+            window.location.href = "https://www.youtube.com/watch?v=A1h7DeR3eic";
+        }
+    </script>
+
+</body>
+</html>
